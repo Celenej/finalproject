@@ -1,3 +1,4 @@
+@import 'menu';
 
 *{box-sizing:border-box;}
 
@@ -14,7 +15,7 @@ body{ @include background;
 .maincontainer{@include background;
               margin:0;
               height:100%}
-              
+
 h1{ 
   font-size: 40px;
   color:$yellow;
