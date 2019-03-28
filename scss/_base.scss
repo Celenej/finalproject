@@ -1,24 +1,31 @@
-$maincontainer:1200px;
-$section-padding:20px; 
 
-body{
-  
-  background-color: $blue;
+*{box-sizing:border-box;}
 
-  background-color: #blue;
-  color: $darkgray;
+
+body{ @include background;
+  background-color:$mediumblue;
   font-family: 'Rokkitt', serif;
-  line-height:1.6;
+  line-height:1.5;
   color: black;
-  background-color: #fff;
-}
+  height:100%;
+  margin:0;
 
+}
+.maincontainer{@include background;
+              margin:0;
+              height:100%}
+              
 h1{ 
   font-size: 40px;
   color:$yellow;
   padding: 20px;
   font-family: 'Francois One', sans-serif;
-    
+  margin:0;
+  font-weight:400; 
+  
+  &.welcome{font-size:6rem;
+    margin-top: 20vh;      
+  }
 }
 
 h2, h3 {
@@ -26,20 +33,34 @@ h2, h3 {
   color:$yellow;
   padding: 20px;
   font-family: 'Francois One', sans-serif;
+  font-weight: 400;
+  margin:0;
+
+  &.student{margin-bottom:2rem;
+            padding:1.2rem 1rem;
+            background:rgba(lighten($mediumblue, 2), 0.5)
+          }
+  &.comp{margin-bottom: 2rem;
+         padding: 1.2rem 1rem;
+        background: rgba(lighten($mediumblue, 2), 0.5)      
+      }
 }
-    
-.maincontainer{
-  max-width:$maincontainer;
-  margin: auto;
-  padding: 0 20px;
-}
+ 
+a{color:$white;
+  text-decoration:none;}
+
 
 header{ 
-  background-color: $lightblue;
-  width: 1200px;
+  position:fixed;
+  z-index:
+  width: 100%;
 }    
               
-img{min-width: 100%;}   
+img{min-width: 100%;}  
+
+main{padding: 4rem;
+  height: 100%;
+  overflow:hidden;}
         
          
         
