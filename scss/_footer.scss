@@ -1,0 +1,93 @@
+// Footer Styles
+footer {
+    .footer-details{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background-color:$banner-blue;
+        color: $footer-text-color;
+    }
+    
+    .course-header h2, .registration h2, .address h2{
+        text-align: left;
+        font-size: 1.4em;
+    }
+    
+    
+    .course-header, .registration {
+        ul{
+            @include flatten;
+            list-style: none;
+        }
+        a{
+            line-height: 2em;
+            font-size: 1em;
+            text-decoration: none;
+            color: $footer-text-color;
+        }
+        padding: 20px;
+    }
+    
+    .address{
+        @include flatten;
+        font-size: 1em;
+        padding: 20px;
+    }
+
+    
+    @include mq($tabletFooter){
+
+        .course-header h2, .registration h2, .address h2{
+            text-align: left;
+            font-size: 1em;
+        }
+
+        .course-header, .registration {
+            
+            a{
+                line-height: 0.8em;
+                text-decoration: none;
+                color: $footer-text-color;
+            }
+        }
+
+        .address{
+            font-size: 0.8em;
+        }
+    }
+
+    @include mq($phoneLandscape){
+
+        .footer-details{
+            grid-template-columns: $one-col;
+        }
+
+        .course-header h2, .registration h2, .address h2{
+            text-align: center;
+            font-size: 1.4em;
+        }
+
+        .course-header, .registration {
+            ul{
+                @include flatten;
+                list-style: none;
+                text-align: center;
+            }
+            a{
+                line-height: 2em;
+                font-size: 1em;
+                text-decoration: none;
+                color: $footer-text-color;
+            }
+            border-bottom: 1px solid black;
+        }
+        
+        .address{
+            @include flatten;
+            text-align: center;
+            font-size: 1em;
+            border-bottom: 1px solid black;
+        }
+
+    }
+    
+}

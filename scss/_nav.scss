@@ -1,0 +1,54 @@
+// Main Navigation Styles
+nav{
+    ul{
+        @include flatten;
+        list-style: none;
+        @include flex-layout-row;
+    }
+
+    a{
+        display: block;
+        text-decoration: none;
+        font-size: 1.2em;
+        line-height: 1.4;
+        text-align: center;
+        padding: 20px;
+        outline: none;
+        color: white;
+
+        #{$link-hover-selector}{
+            outline:none;
+            color: black;
+            background-color: rgba(255, 255, 255, 0.541);
+        }
+    }
+
+    @include mq($tabletPortrait) {
+        $border: 1px solid black;
+        width: 100%;
+        display: none;
+        transition: height 0.3s ease;
+
+        ul{
+            display: block;
+            height: auto;
+        }
+
+        li{
+            width: 100%;
+        }
+
+        a {
+            line-height: 10px;
+            border-right: none;
+            border-top: $border;
+            text-align: center;
+        }
+
+        .show & {
+            display: block;
+        }
+
+        
+    }
+}

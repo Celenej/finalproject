@@ -1,0 +1,33 @@
+
+.accordion {
+    width: 100%;
+    margin: 0 auto;
+    padding: $padding;
+    text-align: left;
+    cursor: pointer;
+}
+
+.lesson-info {
+    border: 2px solid black;
+    margin-block-end: 10px;
+}
+
+.tab {
+    padding: 10px;
+    background-color: $background;
+}
+
+.tab h2 {
+    margin: 0;
+    line-height: 1.4;
+    color: $blue;
+}
+
+.content {
+    display: none;
+    padding: $padding;
+    background-color:$accent;
+    margin: 0;
+}
+
+

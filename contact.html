@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>COMP 1950 - Contact</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+        <header>
+            <div class="header-row-01">
+              <a class="logo" href="index.html"
+                ><img src="images/bcit-logo.png" alt="logo" width="150" height="150"
+              /></a>
+              <button class="hamburger">
+                <span class="hamburger-content">
+                  <span class="hamburger-icon" tabindex="-1">&#9776;</span>
+                  <span class="hamburger-text">Menu</span>
+                </span>
+              </button>
+            </div>
+            <nav>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="lessons.html">Lessons</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </header>
+      <main>
+          <section class="section-00">
+              <div class="heading-img">
+                  <img src="images/contact.jpg" alt="contact">
+              </div>
+              <div class="heading">
+                <h1>Contact Us</h1>
+              </div>  
+            </section>
+        <section class="contact-section">
+           <form onsubmit="document.forms[0].checkValidity() && alert('Thank You. Your request has been sent.')" method="post" class="contact">
+            <div class="form-group fn">
+              <label for="fn">Firstname: </label>
+              <input type="text" id="fn" name="fn" required />
+            </div>
+
+            <div class="form-group ln">
+              <label for="fn">lastname: </label>
+              <input type="text" id="ln" name="ln" required />
+            </div>
+
+            <div class="form-group em">
+              <label for="em">Email: </label>
+              <input type="text" id="em" name="em" required />
+            </div>
+
+            <div class="form-group st">
+              <div class="radio-group">
+                <input type="radio" id="ps" name="st" value="ps" />
+                <label for="ps" class="rd-label">Prospective Student</label>
+              </div>
+              <div class="radio-group">
+                <input type="radio" id="cs" name="st" value="cs" />
+                <label for="cs" class="rd-label">Current Student</label>
+              </div>
+            </div>
+
+            <div class="form-group sn">
+              <label for="sn">BCIT Student Number: </label>
+              <input
+                type="text"
+                id="sn"
+                name="sn"
+                required
+                pattern="[A-Za-z](\d{8})"
+                title="Format: A12345678"
+              />
+            </div>
+
+            <div class="form-group ct">
+              <label for="ct">Message: </label>
+              <textarea name="ct" id="ct"></textarea>
+            </div>
+
+            <div class="form-group sb">
+              <input type="submit" id="sb" name="sb" value="Submit" />
+            </div>
+          </form>
+        </section>
+      </main>
+      <footer>
+          <div class="footer-details">
+              <div class="course-header">
+                  <h2>Course Information</h2>
+                  <ul class="course-details">
+                      <li><a href="about.html">About</a></li>
+                      <li><a href="schedule.html">Schedule</a></li>
+                      <li><a href="lessons.html">Lessons</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                    </ul>
+              </div>
+              <div class="registration">
+                  <h2>Registration</h2>
+                  <ul class="registration-details">
+                      <li><a href="#0">Course Advisor</a></li>
+                      <li><a href="#0">Signup for Infor Session</a></li>
+                      <li><a href="#0">Course Fee</a></li>
+                      <li><a href="#0">Registration</a></li>
+                    </ul>
+              </div>
+              <div class="address">
+                  <h2>Find Us</h2>
+                  <p>British Columbia Institute of Technology</p>
+                  <p>3700 Willingdon Avenue</p>
+                  <p>Burnaby, BC</p>
+                  <p>V5G 3H2, Canada</p>
+                </div>
+          </div> 
+        </footer>
+      <script src="./scripts/form.js"></script>
+      <script src="./scripts/menu.js"></script>
+    </div>
+  </body>
+</html>

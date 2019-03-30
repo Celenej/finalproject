@@ -1,0 +1,36 @@
+header {
+    $header-height: 60px !global;
+    min-height: $header-height;
+    border-left: 18px solid $shadow-color;
+    @include flex-layout-row;
+    align-items: center;
+    position: relative;
+    background: $banner-blue;
+
+    .header-row-01 {
+        @include flex-layout-row;
+        align-items: center;
+    }
+
+    img {
+        position: absolute;
+        z-index: 100;
+        top: 40%;
+        left: 5%;
+    }
+
+    @include mq($tabletPortrait){
+        display: block;
+        .header-row-01 {
+            height: $header-height;
+        }
+
+        img{
+            position: initial;
+            width: 50px;
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+    }
+    
+}

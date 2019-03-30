@@ -1,0 +1,75 @@
+.about-page {
+  .section-01,
+  .section-02,
+  .section-03 {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 540px)) 1fr;
+  }
+
+  .course-content h2,
+  .article-01 h2,
+  .article-02 h2 {
+    text-align: center;
+  }
+
+  .article-01 {
+    @include first-one-with-two-grid;
+    padding: $padding;
+    background-color: $banner-blue;
+    color: white;
+  }
+
+  .article-02 {
+    @include second-column-with-two-grid;
+    padding: $padding;
+    background-color: $accent;
+    color: $blue;
+    line-height: $line-height;
+  }
+
+  .content-02 {
+    @include one-column-with-grid;
+    padding: $padding;
+    line-height: $line-height;
+    background-color: $background;
+  }
+
+  .content-03 {
+    @include one-column-with-grid;
+    padding: $padding;
+    line-height: $line-height;
+    background-color: $accent;
+  }
+
+  .section-04 {
+    padding: $padding;
+    table {
+      margin: 0 auto;
+      padding: $padding;
+      color: $blue;
+      font-weight: bold;
+      letter-spacing: 2px;
+      line-height: 2em;
+      text-align: center;
+      caption {
+        font-size: 1.8em;
+        padding: 10px;
+      }
+      th {
+        font-size: 1.1em;
+        text-align: center;
+      }
+      td:nth-of-type(odd) {
+        text-align: left;
+      }
+    }
+  }
+
+  @include mq($phoneLandscape) {
+    .article-01,
+    .article-02 {
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+  }
+}

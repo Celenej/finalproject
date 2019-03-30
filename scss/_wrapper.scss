@@ -1,0 +1,7 @@
+// Wrapper styles
+.wrapper{
+    max-width: 1025px;
+    @include center;
+    background-color:$wrapper-bg-color;
+    box-shadow: 0 0 20px;
+}

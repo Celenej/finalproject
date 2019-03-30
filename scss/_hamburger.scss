@@ -1,0 +1,32 @@
+// Hamburger Styles
+.hamburger {
+
+    display: none;
+
+    @media (max-width: $tabletPortrait){
+        display: block;
+        width: 60px;
+        background-color: transparent;
+        border: none;
+        @include flatten;
+        cursor: pointer;
+    
+        .hamburger-icon{
+            color: $wrapper-bg-color;
+            line-height: $line-height;
+            font-size: 2.4em;
+        }
+        .hamburger:focus,
+        .hamburger-icon:focus{
+            outline: none;
+        }
+        .hamburger:focus
+        .hamburger-icon{
+            outline: 5px solid rgba($wrapper-bg-color, 0.5);
+        }
+        .hamburger-text{
+            @include visually-hidden;
+        }
+    
+    }
+}
