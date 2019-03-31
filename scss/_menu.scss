@@ -27,3 +27,26 @@ cursor:pointer;
 
 }
 }
+
+.menu{
+position: fixed;
+top:0;
+
+left:80px;
+width:100%;
+opacity:0.7;
+visibility:visible;
+background-color:$blue;
+
+&.show{visiblity: hidden;}
+}
+
+.menu-nav{display:flex;
+        flex-drection: row;
+       flex:1;
+       padding:21px;
+       margin:16px;
+       jsutify-content:center;
+       align-items:center;}
+
+.menu-items{text-align: center;}
