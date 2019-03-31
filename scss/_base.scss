@@ -1,6 +1,94 @@
-@import "menu";
 
-        
+
+
+
+
+*{box-sizing:border-box;}
+
+
+body{ 
+  
+  font-family: 'Rokkitt', serif;
+  line-height:1.5;
+  color: black;
+  height:100%;
+  margin:0;
+
+}
+.wrapper{margin:0;
+        width:100%}
+header{  
+    position:fixed;
+    width:100%;
+    background-color: $mediumblue;
+    background-image: url('../images/homebanner.jpg');
+    height:50%;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+ .overlay{position: absolute;
+top:0;
+right:0;
+width:100%;
+height:100%
+
+}
+
+   .maincontainer{
+    margin:0;
+    width:100%; 
+    background-color:$mediumblue; 
+    
+    
+   }
+  
+  
+  
+  main{background-color:$gray;}
+  footer{background-color:$blue;}
+
+
+//.menu{background-color: $black;}
+
+//.imageface{background-color:$white;}
+//.text{background-color:$white;}
+
+  h1{ 
+  font-size: 40px;
+  color:$yellow;
+  padding: 20px;
+  font-family: 'Francois One', sans-serif;
+  margin:0;
+  font-weight:400; 
+  width: 30%;
+  
+  &.welcome{font-size:3rem;
+    margin-top: 3vh;
+    margin-bottom:2vh;      
+  }
+}
+
+h2, h3 {
+  font-size: 20px;
+  color:$yellow;
+  padding: 20px;
+  font-family: 'Francois One', sans-serif;
+  font-weight: 400;
+  margin:0;
+
+  &.student{margin-bottom:2rem;
+            padding:1.2rem 1rem;
+            //background:rgba(lighten($mediumblue, 2), 0.5)
+          }
+}
+ 
        
-        
+
+a{color:$white;
+  text-decoration:none;
+ }
+
+
+
+
 
