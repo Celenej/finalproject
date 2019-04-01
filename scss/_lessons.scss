@@ -1,33 +1,61 @@
-
-.accordion {
+.lessons-page {
+  .accordion {
     width: 100%;
     margin: 0 auto;
     padding: $padding;
     text-align: left;
     cursor: pointer;
-}
+  }
 
-.lesson-info {
+  .lesson-info {
     border: 2px solid black;
     margin-block-end: 10px;
-}
+  }
 
-.tab {
+  .tab {
     padding: 10px;
     background-color: $background;
-}
+  }
 
-.tab h2 {
+  .tab h2 {
     margin: 0;
     line-height: 1.4;
     color: $blue;
-}
+  }
 
-.content {
+  .content {
     display: none;
     padding: $padding;
-    background-color:$accent;
+    background-color: $accent;
     margin: 0;
+  }
+
+  .lesson-sec {
+    h2 {
+      font-size: 1.8em;
+      color: $blue;
+    }
+
+    h3 {
+      font-size: 1.2em;
+      color: $text-color;
+    }
+
+    strong {
+      color: $text-color;
+      font-weight: bolder;
+      font-size: 1.15em;
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding: $padding;
+    }
+  }
+
+  .multimedia .img-media-tab {
+    padding-left: 10px;
+  }
 }
-
-
