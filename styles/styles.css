@@ -239,6 +239,9 @@ main {
   padding: 20px; }
 .lessons-page .multimedia .img-media-tab {
   padding-left: 10px; }
+.lessons-page video {
+  max-width: 100%;
+  height: auto; }
 
 .about-page .section-01,
 .about-page .section-02,
