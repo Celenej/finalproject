@@ -217,18 +217,3 @@
   height: 100%;
 }
 
-@mixin imagegrid($qty, $margin) {
-  width: ((100% - (($qty - 1) * $margin)) / $qty);
-  &:nith-child(n) {
-    margin-right: $margin;
-    margin-bottom: $margin;
-  }
-  &:nth-child(#{$qty}n) {
-    margin-right: 0;
-    margin-bottom: 0;
-  }
-
-  &:after {
-    clear: both;
-  }
-}

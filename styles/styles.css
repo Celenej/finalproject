@@ -21,7 +21,7 @@ body {
   font-family: "Sawarabi Mincho", sans-serif;
   line-height: 1.6; }
 
-h1, h2, h3 {
+h1, h2, h3, a, p {
   font-family: "Bree Serif", serif; }
 
 body {
@@ -161,10 +161,89 @@ nav a {
   margin: 0 auto;
   color: #0444f3;
   text-shadow: 3px 3px #0ae8f0; }
+.home-page .content-01 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  padding: 20px;
+  background: white; }
+.home-page .content-01 h1 {
+  text-align: left;
+  padding-left: 30px; }
+.home-page .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 30px;
+  grid-gap: 20px; }
+.home-page .gallery-item {
+  position: relative;
+  border: 1px solid rgba(28, 100, 235, 0.904); }
+  .home-page .gallery-item:hover, .home-page .gallery-item:focus, .home-page .gallery-item:active .topic-details {
+    cursor: pointer;
+    display: block; }
+.home-page .gallery-item:before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 0;
+  padding-bottom: calc(100% / (3 / 2)); }
+.home-page .topic-details {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translateY(-50%);
+  z-index: 100;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  background: #0444f3;
+  padding: 5px; }
+.home-page .gallery-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+.home-page .gallery-item p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  background-color: #0ae8f0;
+  opacity: 0.7;
+  font-size: 1.2em; }
+.home-page .section-03 {
+  position: relative; }
+.home-page .section-03 .body-img img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+.home-page .section-03 .body-text a {
+  position: absolute;
+  top: 35%;
+  left: 25%;
+  font-size: 5em;
+  margin: 0 auto;
+  color: #0444f3;
+  text-shadow: 3px 3px #0ae8f0;
+  background: white;
+  opacity: 0.7;
+  padding: 10px;
+  text-decoration: none; }
 @media (max-width: 53.125em) {
   .home-page .section-01 .heading h1 {
     font-size: 3.5em;
     top: 20%;
+    left: 25%; }
+  .home-page .section-03 .body-text a {
+    font-size: 3.5em;
+    top: 35%;
     left: 25%; } }
 @media (max-width: 44.375em) {
   .home-page .section-01 .heading h1 {
@@ -179,10 +258,16 @@ nav a {
     left: 20%; } }
 @media (max-width: 33.125em) {
   .home-page .section-01 .heading h1 {
-    font-size: 2.5em; } }
+    font-size: 2.5em; }
+  .home-page .section-03 .body-text a {
+    font-size: 3.5em;
+    left: 20%; } }
 @media (max-width: 28.75em) {
   .home-page .section-01 .heading h1 {
-    font-size: 2em; } }
+    font-size: 2em; }
+  .home-page .section-03 .body-text a {
+    font-size: 3em;
+    left: 20%; } }
 
 .about-page .section-00 {
   position: relative; }
