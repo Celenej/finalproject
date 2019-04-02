@@ -1,4 +1,11 @@
 .contact-page {
+  //Local Variable
+  $width:100%;
+
+  .fn, .ln, .em, .st, .sn, .ct{
+    font-size: 1.2em;
+  }
+
   .section-00 {
     position: relative;
   }
@@ -16,6 +23,100 @@
     text-shadow: 3px 3px $shadow-color;
   }
 
+  .section-01{
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 540px)) 1fr;
+  }
+
+  .article-01 h2,
+  .article-02 h2 {
+    text-align: center;
+  }
+
+  .article-01 {
+    @include first-one-with-two-grid;
+    padding: $padding + 10;
+    background-color: $yellow;
+    color: $blue;
+  }
+
+  .article-02 {
+    @include second-column-with-two-grid;
+    padding: $padding;
+    background-color: $accent;
+    color: $blue;
+    line-height: $line-height;
+
+    p{
+      font-style: italic;
+      font-weight: bold;
+      color: $text-color;
+      text-shadow: 1px 1px $blue;
+      font-size: 1.3em;
+    }
+  }
+
+  
+  @include mq($phoneLandscape) {
+    .article-01,
+    .article-02 {
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+  }
+
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $padding;
+    background-color: $blue;
+  }
+
+  .contact-form {
+    padding: 3em;
+    width: 100%;
+    height: auto;
+    background: $background;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    background-color: $footer-text-color;
+  }
+
+  #ps,#cs{
+    padding: $padding;
+    margin-top: 6px;
+    margin-bottom: 16px;
+  }
+
+  input[type="submit"] {
+    background-color: $text-color;
+    color: $wrapper-bg-color;
+    padding: 15px 185px;
+    border: none;
+    border-radius: 4px;
+    display: block;
+    margin:auto;
+    font-size: 1.5em;
+
+    #{$link-hover-selector}{
+      background-color: $blue;
+      color: $wrapper-bg-color;
+    }
+  }
+
   @include mq($tabletPortrait) {
     .section-00 .heading h1 {
       font-size: 4em;
@@ -29,7 +130,7 @@
     }
   }
 
-  @include mq($phoneMedium){
+  @include mq($phoneMedium) {
     .section-00 .heading h1 {
       font-size: 3.5em;
       top: 30%;
@@ -45,5 +146,10 @@
     }
   }
 
-  
+  @include mq($phoneHeader){
+    input[type="submit"]{
+      padding: $padding;
+      width: $width;
+    }
+  }
 }

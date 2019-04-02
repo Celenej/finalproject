@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>COMP 1950 - Contact</title>
-    <link rel="shortcut icon" href="./images/bcit_logo_page_title.ico">
+    <link rel="shortcut icon" href="./images/bcit_logo_page_title.ico" />
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
@@ -13,7 +13,8 @@
       <header>
         <div class="header-row-01">
           <a class="logo" href="index.html"
-            ><img src="images/bcit-logo.png" alt="logo"/></a>
+            ><img src="images/bcit-logo.png" alt="logo"
+          /></a>
           <button class="hamburger">
             <span class="hamburger-content">
               <span class="hamburger-icon" tabindex="-1">&#9776;</span>
@@ -41,59 +42,72 @@
               <h1>Contact Us</h1>
             </div>
           </section>
+          <section class="section-01">
+              <article class="article-01">
+                <h2>Course Contact</h2>
+                <p>Need any help during the course work <br> please contact aside mentioned instructore for your course</p>
+              </article>
+              <article class="article-02">
+                <h2>Instructor Information</h2>
+                <p>Instructor:&nbsp;Michael Whyte</p>
+                <p>Email:&nbsp;Michael_Whyte#bcit.ca </p>
+              </article>
+            </section>
           <section class="contact-section">
-            <form
-              onsubmit="document.forms[0].checkValidity() && alert('Thank You. Your request has been sent.')"
-              method="post"
-              class="contact"
-            >
-              <div class="form-group fn">
-                <label for="fn">Firstname: </label>
-                <input type="text" id="fn" name="fn" required />
-              </div>
-
-              <div class="form-group ln">
-                <label for="fn">lastname: </label>
-                <input type="text" id="ln" name="ln" required />
-              </div>
-
-              <div class="form-group em">
-                <label for="em">Email: </label>
-                <input type="text" id="em" name="em" required />
-              </div>
-
-              <div class="form-group st">
-                <div class="radio-group">
-                  <input type="radio" id="ps" name="st" value="ps" />
-                  <label for="ps" class="rd-label">Prospective Student</label>
+            <div class="contact-form">
+              <form
+                onsubmit="document.forms[0].checkValidity() && alert('Thank You. Your request has been sent.')"
+                method="post"
+                class="contact"
+              >
+                <div class="form-group fn">
+                  <label for="fn">Firstname: </label>
+                  <input type="text" id="fn" name="fn" required />
                 </div>
-                <div class="radio-group">
-                  <input type="radio" id="cs" name="st" value="cs" />
-                  <label for="cs" class="rd-label">Current Student</label>
+
+                <div class="form-group ln">
+                  <label for="ln">lastname: </label>
+                  <input type="text" id="ln" name="ln" required />
                 </div>
-              </div>
 
-              <div class="form-group sn">
-                <label for="sn">BCIT Student Number: </label>
-                <input
-                  type="text"
-                  id="sn"
-                  name="sn"
-                  required
-                  pattern="[A-Za-z](\d{8})"
-                  title="Format: A12345678"
-                />
-              </div>
+                <div class="form-group em">
+                  <label for="em">Email: </label>
+                  <input type="text" id="em" name="em"  required />
+                </div>
 
-              <div class="form-group ct">
-                <label for="ct">Message: </label>
-                <textarea name="ct" id="ct"></textarea>
-              </div>
+                <div class="form-group st">
+                  <div class="radio-group">
+                    <input type="radio" id="ps" name="st" value="ps" />
+                    <label for="ps" class="rd-label">Prospective Student</label>
+                  </div>
+                  <div class="radio-group">
+                    <input type="radio" id="cs" name="st" value="cs" />
+                    <label for="cs" class="rd-label">Current Student</label>
+                  </div>
+                </div>
 
-              <div class="form-group sb">
-                <input type="submit" id="sb" name="sb" value="Submit" />
-              </div>
-            </form>
+                <div class="form-group sn">
+                  <label for="sn">BCIT Student Number: </label>
+                  <input
+                    type="text"
+                    id="sn"
+                    name="sn"
+                    required
+                    pattern="[A-Za-z](\d{8})"
+                    title="Format: A12345678"
+                  />
+                </div>
+
+                <div class="form-group ct">
+                  <label for="ct">Message: </label>
+                  <textarea name="ct" id="ct"></textarea>
+                </div>
+
+                <div class="form-group sb">
+                  <input type="submit" id="sb" name="sb" value="Submit" />
+                </div>
+              </form>
+            </div>
           </section>
         </div>
       </main>
@@ -129,7 +143,8 @@
       <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"
+      ></script>
       <script src="./scripts/menu.js"></script>
     </div>
   </body>

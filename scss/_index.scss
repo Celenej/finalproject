@@ -41,7 +41,6 @@
       font-size: 3.5em;
       top:20%;
       left: 25%;
-
     }
   }
 
@@ -58,7 +57,7 @@
     }
   }
 
-  @include mq($phoneheader){
+  @include mq($phoneHeader){
     .section-01 .heading h1 {
       top: 15%;
       left: 20%;
