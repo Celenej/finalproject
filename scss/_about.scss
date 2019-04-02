@@ -1,4 +1,16 @@
 .about-page {
+  .section-00 {
+    position: relative;
+  }
+
+  .section-00 .heading-img img {
+    @include header-img-fit;
+  }
+
+  .section-00 .heading h1 {
+    @include header-img-text;
+  }
+
   .section-01,
   .section-02,
   .section-03 {

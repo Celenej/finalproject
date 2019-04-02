@@ -1,0 +1,80 @@
+.home-page {
+    
+    $translate: translateY(-50%);
+    $zindex:100;
+
+  .hero-slider{
+    @include header-image-slider;
+  }
+  
+  .prev{
+    position: absolute;
+    top:50%;
+    left: 2%;
+    transform: $translate;
+    z-index: $zindex;
+    opacity: 0.8;
+  }
+  
+  .next{
+    position: absolute;
+    top:50%;
+    right: 2%;
+    transform: $translate;
+    z-index: $zindex;
+    opacity: 0.8;
+  }
+
+  .section-01 .heading h1 {
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    z-index: $zindex;
+    font-size: 4em;
+    margin: 0 auto;
+    color: rgb(4, 68, 243);
+    text-shadow: 3px 3px $shadow-color;
+  }
+
+  @include mq($tabletPortrait) {
+    .section-01 .heading h1 {
+      font-size: 3.5em;
+      top:20%;
+      left: 25%;
+
+    }
+  }
+
+  @include mq($tabletFooter) {
+    .section-01 .heading h1 {
+      font-size: 3em;
+    }
+  }
+
+  @include mq($phoneLandscape) {
+    .section-01 .heading h1 {
+      top: 20%;
+      left: 20%;
+    }
+  }
+
+  @include mq($phoneheader){
+    .section-01 .heading h1 {
+      top: 15%;
+      left: 20%;
+    }
+  }
+
+  @include mq($phoneMedium){
+    .section-01 .heading h1 {
+      font-size: 2.5em;
+    }
+
+  }
+
+  @include mq($phonePortrait) {
+    .section-01 .heading h1 {
+      font-size: 2em;
+    }
+  }
+}

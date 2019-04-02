@@ -31,6 +31,7 @@
   }
 
   .lesson-sec {
+    
     h2 {
       font-size: 1.8em;
       color: $blue;
@@ -46,7 +47,7 @@
       font-weight: bolder;
       font-size: 1.15em;
     }
-
+    
     img {
       display: block;
       margin-left: auto;
@@ -63,4 +64,31 @@
      max-width: 100%;
      height: auto;
   }
+
+
+  
+  @include mq($phoneLandscape){
+  
+  .lesson-sec {
+    h2 {
+      font-size: 1.5em;
+      color: $blue;
+    }
+
+    h3 {
+      font-size: 1.1em;
+      color: $text-color;
+    }
+
+    strong {
+      color: $text-color;
+      font-weight: bolder;
+      font-size: 1em;
+    }
+    
+    li{
+      max-width: 100%;
+    }
+  }
+  } 
 }

@@ -49,7 +49,7 @@ header {
     align-items: center; }
   header img {
     position: absolute;
-    z-index: 100;
+    z-index: 9999;
     top: 40%;
     left: 5%; }
   @media (max-width: 53.125em) {
@@ -134,17 +134,65 @@ nav a {
     .show nav {
       display: block; } }
 
-.section-00 {
-  position: relative; }
+.home-page .hero-slider {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+.home-page .prev {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  transform: translateY(-50%);
+  z-index: 100;
+  opacity: 0.8; }
+.home-page .next {
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  transform: translateY(-50%);
+  z-index: 100;
+  opacity: 0.8; }
+.home-page .section-01 .heading h1 {
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  z-index: 100;
+  font-size: 4em;
+  margin: 0 auto;
+  color: #0444f3;
+  text-shadow: 3px 3px #0ae8f0; }
+@media (max-width: 53.125em) {
+  .home-page .section-01 .heading h1 {
+    font-size: 3.5em;
+    top: 20%;
+    left: 25%; } }
+@media (max-width: 44.375em) {
+  .home-page .section-01 .heading h1 {
+    font-size: 3em; } }
+@media (max-width: 41.875em) {
+  .home-page .section-01 .heading h1 {
+    top: 20%;
+    left: 20%; } }
+@media (max-width: 37.5em) {
+  .home-page .section-01 .heading h1 {
+    top: 15%;
+    left: 20%; } }
+@media (max-width: 33.125em) {
+  .home-page .section-01 .heading h1 {
+    font-size: 2.5em; } }
+@media (max-width: 28.75em) {
+  .home-page .section-01 .heading h1 {
+    font-size: 2em; } }
 
-.section-00 .heading-img img {
+.about-page .section-00 {
+  position: relative; }
+.about-page .section-00 .heading-img img {
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover; }
-
-.section-00 .heading h1 {
+.about-page .section-00 .heading h1 {
   position: absolute;
   top: 40%;
   left: 25%;
@@ -152,97 +200,6 @@ nav a {
   margin: 0 auto;
   color: #0444f3;
   text-shadow: 5px 5px #0ae8f0; }
-
-.section-01 .scheduled-days {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  padding: 20px;
-  margin: 0; }
-
-.box {
-  position: relative;
-  border: 1px solid rgba(28, 100, 235, 0.904);
-  border-radius: 10px;
-  padding: 20px;
-  display: block;
-  background-color: rgba(150, 216, 241, 0.842);
-  box-shadow: 0 0 5px; }
-
-.box span h2 {
-  text-align: center; }
-
-.box .course-details li {
-  line-height: 2em; }
-
-@media (max-width: 53.125em) {
-  .section-00 .heading h1 {
-    font-size: 4em;
-    top: 40%;
-    left: 25%; }
-
-  .section-01 .scheduled-days {
-    grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 41.875em) {
-  .section-00 .heading h1 {
-    font-size: 3em;
-    top: 35%;
-    left: 20%; }
-
-  .section-01 .scheduled-days {
-    grid-template-columns: 100%; } }
-@media (max-width: 28.75em) {
-  .section-00 .heading h1 {
-    font-size: 2.5em;
-    top: 35%;
-    left: 15%;
-    width: 100%; } }
-main {
-  background-color: rgba(204, 214, 235, 0.753); }
-
-.lessons-page .accordion {
-  width: 100%;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: left;
-  cursor: pointer; }
-.lessons-page .lesson-info {
-  border: 2px solid black;
-  margin-block-end: 10px; }
-.lessons-page .tab {
-  padding: 10px;
-  background-color: rgba(150, 216, 241, 0.842); }
-.lessons-page .tab h2 {
-  margin: 0;
-  line-height: 1.4;
-  color: #00172e; }
-.lessons-page .content {
-  display: none;
-  padding: 20px;
-  background-color: rgba(248, 244, 203, 0.61);
-  margin: 0; }
-.lessons-page .lesson-sec h2 {
-  font-size: 1.8em;
-  color: #00172e; }
-.lessons-page .lesson-sec h3 {
-  font-size: 1.2em;
-  color: #0444f3; }
-.lessons-page .lesson-sec strong {
-  color: #0444f3;
-  font-weight: bolder;
-  font-size: 1.15em; }
-.lessons-page .lesson-sec img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px; }
-.lessons-page .multimedia .img-media-tab {
-  padding-left: 10px; }
-.lessons-page video {
-  max-width: 100%;
-  height: auto; }
-
 .about-page .section-01,
 .about-page .section-02,
 .about-page .section-03 {
@@ -300,6 +257,154 @@ main {
   .about-page .article-02 {
     grid-column-start: 1;
     grid-column-end: 4; } }
+
+.schedule-page .section-00 {
+  position: relative; }
+.schedule-page .section-00 .heading-img img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+.schedule-page .section-00 .heading h1 {
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  font-size: 5em;
+  margin: 0 auto;
+  color: #0444f3;
+  text-shadow: 5px 5px #0ae8f0; }
+.schedule-page .section-01 .scheduled-days {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  padding: 20px;
+  margin: 0; }
+.schedule-page .box {
+  position: relative;
+  border: 1px solid rgba(28, 100, 235, 0.904);
+  border-radius: 10px;
+  padding: 20px;
+  display: block;
+  background-color: rgba(150, 216, 241, 0.842);
+  box-shadow: 0 0 5px; }
+.schedule-page .box span h2 {
+  text-align: center; }
+.schedule-page .box .course-details li {
+  line-height: 2em; }
+@media (max-width: 53.125em) {
+  .schedule-page .section-00 .heading h1 {
+    font-size: 4em;
+    top: 40%;
+    left: 25%; }
+  .schedule-page .section-01 .scheduled-days {
+    grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 41.875em) {
+  .schedule-page .section-00 .heading h1 {
+    font-size: 3em;
+    top: 35%;
+    left: 20%; }
+  .schedule-page .section-01 .scheduled-days {
+    grid-template-columns: 100%; } }
+@media (max-width: 28.75em) {
+  .schedule-page .section-00 .heading h1 {
+    font-size: 2.5em;
+    top: 35%;
+    left: 15%;
+    width: 100%; } }
+
+.lessons-page .accordion {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+  cursor: pointer; }
+.lessons-page .lesson-info {
+  border: 2px solid black;
+  margin-block-end: 10px; }
+.lessons-page .tab {
+  padding: 10px;
+  background-color: rgba(150, 216, 241, 0.842); }
+.lessons-page .tab h2 {
+  margin: 0;
+  line-height: 1.4;
+  color: #00172e; }
+.lessons-page .content {
+  display: none;
+  padding: 20px;
+  background-color: rgba(248, 244, 203, 0.61);
+  margin: 0; }
+.lessons-page .lesson-sec h2 {
+  font-size: 1.8em;
+  color: #00172e; }
+.lessons-page .lesson-sec h3 {
+  font-size: 1.2em;
+  color: #0444f3; }
+.lessons-page .lesson-sec strong {
+  color: #0444f3;
+  font-weight: bolder;
+  font-size: 1.15em; }
+.lessons-page .lesson-sec img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px; }
+.lessons-page .multimedia .img-media-tab {
+  padding-left: 10px; }
+.lessons-page video {
+  max-width: 100%;
+  height: auto; }
+@media (max-width: 41.875em) {
+  .lessons-page .lesson-sec h2 {
+    font-size: 1.5em;
+    color: #00172e; }
+  .lessons-page .lesson-sec h3 {
+    font-size: 1.1em;
+    color: #0444f3; }
+  .lessons-page .lesson-sec strong {
+    color: #0444f3;
+    font-weight: bolder;
+    font-size: 1em; }
+  .lessons-page .lesson-sec li {
+    max-width: 100%; } }
+
+main {
+  background-color: rgba(204, 214, 235, 0.753); }
+
+.contact-page .section-00 {
+  position: relative; }
+.contact-page .section-00 .heading-img img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+.contact-page .section-00 .heading h1 {
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  font-size: 5em;
+  margin: 0 auto;
+  color: #0444f3;
+  text-shadow: 3px 3px #0ae8f0; }
+@media (max-width: 53.125em) {
+  .contact-page .section-00 .heading h1 {
+    font-size: 4em; } }
+@media (max-width: 41.875em) {
+  .contact-page .section-00 .heading h1 {
+    font-size: 4em;
+    left: 25%; } }
+@media (max-width: 33.125em) {
+  .contact-page .section-00 .heading h1 {
+    font-size: 3.5em;
+    top: 30%;
+    left: 20%; } }
+@media (max-width: 28.75em) {
+  .contact-page .section-00 .heading h1 {
+    font-size: 3.5em;
+    top: 30%;
+    left: 15%; } }
 
 footer .footer-details {
   display: grid;
