@@ -85,4 +85,29 @@
       grid-column-end: 4;
     }
   }
+
+  @include mq($tabletPortrait) {
+    .section-00 .heading h1 {
+      font-size: 4em;
+      top: 40%;
+      left: 25%;
+    }
+  }
+
+  @include mq($phoneLandscape) {
+    .section-00 .heading h1 {
+      font-size: 3em;
+      top: 35%;
+      left: 20%;
+    }
+  }
+
+  @include mq($phonePortrait) {
+    .section-00 .heading h1 {
+      font-size: 2.5em;
+      top: 35%;
+      left: 15%;
+      width: 100%;
+    }
+  }
 }

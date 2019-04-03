@@ -2,6 +2,9 @@
   $translate: translateY(-50%);
   $zindex: 100;
 
+  .section-01 {
+    position: relative;
+  }
   .hero-slider {
     @include header-image-slider;
   }
@@ -28,7 +31,7 @@
     position: absolute;
     top: 25%;
     left: 30%;
-    z-index: $zindex;
+    z-index: 999;
     font-size: 4em;
     margin: 0 auto;
     color: rgb(4, 68, 243);
@@ -36,15 +39,18 @@
   }
 
   .content-01 {
+    margin: 0;
     grid-column-start: 2;
     grid-column-end: 4;
     padding: 20px;
-    background: $footer-text-color;
+    background: $accent;
   }
 
   .content-01 h1 {
     text-align: left;
     padding-left: 30px;
+    color: $text-color;
+    font-size: 2em;
   }
 
   .gallery {
@@ -54,15 +60,16 @@
     margin: 0 auto;
     padding: 30px;
     grid-gap: 20px;
-    
   }
 
   .gallery-item {
     position: relative;
     border: 1px solid $banner-blue;
-    #{$link-hover-selector} .topic-details{
-      cursor: pointer;
-      display: block;
+    #{$link-hover-selector} {
+      .topic-details {
+        cursor: pointer;
+        display: block;
+      }
     }
   }
 
@@ -74,7 +81,7 @@
     padding-bottom: calc(100% / (3 / 2));
   }
 
-  .topic-details{
+  .topic-details {
     display: none;
     position: absolute;
     top: 50%;
@@ -83,14 +90,14 @@
     z-index: $zindex;
     color: $footer-text-color;
     text-decoration: none;
-    font-size: 1.5em; 
+    font-size: 1.5em;
     background: $text-color;
     padding: 5px;
   }
 
   .gallery-item img {
-    
-    @include el-cover;   
+    @include el-cover;
+
   }
 
   .gallery-item p {
@@ -100,9 +107,9 @@
     width: 100%;
     margin: 0;
     padding: 10px;
+    font-size: 1.2em;
     background-color: $shadow-color;
     opacity: 0.7;
-    font-size: 1.2em;
   }
 
   .section-03 {
@@ -133,7 +140,7 @@
       left: 25%;
     }
 
-    .section-03 .body-text a{
+    .section-03 .body-text a {
       font-size: 3.5em;
       top: 35%;
       left: 25%;
@@ -164,7 +171,7 @@
     .section-01 .heading h1 {
       font-size: 2.5em;
     }
-    .section-03 .body-text a{
+    .section-03 .body-text a {
       font-size: 3.5em;
       left: 20%;
     }
@@ -174,9 +181,16 @@
     .section-01 .heading h1 {
       font-size: 2em;
     }
-    .section-03 .body-text a{
+    .section-03 .body-text a {
       font-size: 3em;
       left: 20%;
     }
+  }
+
+  @include mq(620px){
+    .content-01 h1{
+      text-align:center;
+    }
+
   }
 }
